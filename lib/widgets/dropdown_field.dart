@@ -24,6 +24,7 @@ class _DropDownField<T> extends StatefulWidget {
   final _DropdownType dropdownType;
   final bool enabled;
   final MultiSelectController<T> selectedItemsNotifier;
+  final double suffixIconSpacing;
 
   const _DropDownField({
     super.key,
@@ -32,6 +33,7 @@ class _DropDownField<T> extends StatefulWidget {
     required this.maxLines,
     required this.dropdownType,
     required this.selectedItemsNotifier,
+    required this.suffixIconSpacing,
     this.hintText = 'Select value',
     this.fillColor,
     this.border,
@@ -150,7 +152,7 @@ class _DropDownFieldState<T> extends State<_DropDownField<T>> {
                     : hintBuilder(context),
               },
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: widget.suffixIconSpacing),
             widget.suffixIcon ??
                 (widget.enabled
                     ? _defaultOverlayIconDown

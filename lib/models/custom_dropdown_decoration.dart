@@ -23,6 +23,9 @@ class CustomDropdownDecoration {
   /// Suffix icon for opened/expanded state of [CustomDropdown].
   final Widget? expandedSuffixIcon;
 
+  /// The spacing between the suffix icon and the header content.
+  final double? suffixIconSpacing;
+
   /// [CustomDropdown] header prefix icon.
   final Widget? prefixIcon;
 
@@ -75,6 +78,7 @@ class CustomDropdownDecoration {
     this.expandedShadow,
     this.closedSuffixIcon,
     this.expandedSuffixIcon,
+    this.suffixIconSpacing,
     this.prefixIcon,
     this.closedBorder,
     this.closedBorderRadius,

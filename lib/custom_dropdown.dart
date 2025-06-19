@@ -57,6 +57,8 @@ const _defaultErrorStyle = TextStyle(
   height: 0.5,
 );
 
+const _defaultIconSpacing = 12.0;
+
 class CustomDropdown<T> extends StatefulWidget {
   /// The list of items user can select.
   final List<T>? items;
@@ -716,6 +718,7 @@ class _CustomDropdownState<T> extends State<CustomDropdown<T>> {
                         enabled ? decoration?.closedSuffixIcon : disabledDecoration?.suffixIcon,
                     fillColor:
                         enabled ? decoration?.closedFillColor : disabledDecoration?.fillColor,
+                    suffixIconSpacing: decoration?.suffixIconSpacing ?? _defaultIconSpacing,
                     maxLines: widget.maxlines,
                     headerPadding: widget.closedHeaderPadding,
                     dropdownType: widget._dropdownType,
